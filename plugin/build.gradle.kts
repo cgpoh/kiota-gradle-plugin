@@ -6,6 +6,7 @@ plugins {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 testing {
@@ -37,7 +38,7 @@ testing {
 }
 
 // The project version used as the plugin version when publishing.
-version = "0.0.1"
+version = "0.0.2"
 group = "io.kiota"
 
 gradlePlugin {
