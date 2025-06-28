@@ -1,4 +1,4 @@
-package io.kiota.gradle.plugin
+package io.github.cgpoh.kiota.gradle.plugin
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Internal

@@ -1,7 +1,7 @@
-package io.kiota.gradle.plugin
+package io.github.cgpoh.kiota.gradle.plugin
 
 import org.gradle.testfixtures.ProjectBuilder
-import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.Assertions
 import kotlin.test.Test
 
 /**
@@ -12,9 +12,9 @@ class KiotaGradlePluginPluginTest {
     fun `plugin registers task`() {
         // Create a test project and apply the plugin
         val project = ProjectBuilder.builder().build()
-        project.plugins.apply("io.kiota.kiota-gradle-plugin")
+        project.plugins.apply("io.github.cgpoh.kiota-gradle-plugin")
 
         // Verify the result
-        assertNotNull(project.tasks.findByName("generateKiota"))
+        Assertions.assertNotNull(project.tasks.findByName("generateKiota"))
     }
 }
