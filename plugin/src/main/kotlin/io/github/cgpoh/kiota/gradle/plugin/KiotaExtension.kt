@@ -1,4 +1,4 @@
-package io.kiota.gradle.plugin
+package io.github.cgpoh.kiota.gradle.plugin
 
 import org.gradle.api.model.ObjectFactory
 import org.gradle.api.provider.ListProperty
@@ -20,7 +20,7 @@ abstract class KiotaExtension @Inject constructor(objects: ObjectFactory) {
     val osName: Property<String> = objects.property(String::class.java).convention(System.getProperty("os.name"))
     val osArch: Property<String> = objects.property(String::class.java).convention(System.getProperty("os.arch"))
     val baseURL: Property<String> = objects.property(String::class.java).convention("https://github.com/microsoft/kiota/releases/download")
-    val kiotaVersion: Property<String> = objects.property(String::class.java).convention("1.22.2")
+    val kiotaVersion: Property<String> = objects.property(String::class.java).convention("1.24.0")
 
     val file: RegularFileProperty = objects.fileProperty()
     val url: Property<URL> = objects.property(URL::class.java)

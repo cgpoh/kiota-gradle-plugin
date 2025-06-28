@@ -38,16 +38,16 @@ testing {
 }
 
 // The project version used as the plugin version when publishing.
-version = "0.0.2"
-group = "io.kiota"
+version = "0.0.1"
+group = "io.github.cgpoh.kiota-gradle-plugin"
 
 gradlePlugin {
     website.set("https://github.com/cgpoh/kiota-gradle-plugin")
     vcsUrl.set("https://github.com/cgpoh/kiota-gradle-plugin")
     plugins {
         create("kiotaGradlePlugin") {
-            id = "io.kiota.kiota-gradle-plugin"
-            implementationClass = "io.kiota.gradle.plugin.KiotaGradlePluginPlugin"
+            id = "io.github.cgpoh.kiota-gradle-plugin"
+            implementationClass = "io.github.cgpoh.kiota.gradle.plugin.KiotaGradlePluginPlugin"
             displayName = "Kiota Gradle plugin"
             description = "Gradle plugin to generate code using Kiota"
             tags.set(listOf("kiota", "code generation", "openapi", "rest", "sdk", "client", "java"))

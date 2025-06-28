@@ -1,7 +1,7 @@
-package io.kiota.gradle.plugin
+package io.github.cgpoh.kiota.gradle.plugin
 
 import org.gradle.testkit.runner.GradleRunner
-import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.io.TempDir
 import java.io.File
 import kotlin.test.Test
@@ -26,7 +26,7 @@ class KiotaGradlePluginPluginFunctionalTest {
 
         buildFile.writeText("""
             plugins {
-                id("io.kiota.kiota-gradle-plugin")
+                id("io.github.cgpoh.kiota-gradle-plugin")
             }
 
             kiota {
@@ -56,7 +56,7 @@ class KiotaGradlePluginPluginFunctionalTest {
         val result = runner.build()
 
         // Verify the result
-        assertTrue(result.output.contains("Kiota code generation completed"))
-        assertTrue(projectDir.resolve("build/generated-sources/kiota").exists())
+        Assertions.assertTrue(result.output.contains("Kiota code generation completed"))
+        Assertions.assertTrue(projectDir.resolve("build/generated-sources/kiota").exists())
     }
 }
