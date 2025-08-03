@@ -4,6 +4,18 @@ plugins {
     alias(libs.plugins.gradle.plugin.publish)
 }
 
+// Configure Java toolchain for Java 17
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+// Configure Kotlin to target Java 17
+kotlin {
+    jvmToolchain(17)
+}
+
 repositories {
     mavenCentral()
     mavenLocal()
@@ -38,7 +50,7 @@ testing {
 }
 
 // The project version used as the plugin version when publishing.
-version = "0.0.1"
+version = "0.0.2"
 group = "io.github.cgpoh.kiota-gradle-plugin"
 
 gradlePlugin {
